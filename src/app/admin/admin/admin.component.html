@@ -1,0 +1,45 @@
+<ng-container>
+    <!--toolbar-->
+    <mat-toolbar style="background-color: #3A6351; color: white;" class="example-header" *ngIf="userData as user">
+        <button mat-icon-button (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span>Analogku</span>
+        <div class="uk-width-expand">
+
+        </div>
+
+        <button (click)="logout()" mat-flat-button color="warn">Logout</button>
+    </mat-toolbar>
+    <!--end toolbar-->
+
+    <mat-sidenav-container class="admin-container">
+        <mat-sidenav #sidenav mode="side" [position]="'start'" [opened]='true' class="sidenav-left"
+            [fixedInViewport]="true" [fixedTopGap]="60" [fixedBottomGap]="0">
+
+            <mat-nav-list>
+                <mat-list-item routerLink="/admin/camera-analog">
+                    <mat-icon matListIcon>camera</mat-icon>
+                    <h3 matLine>Camera</h3>
+                </mat-list-item>
+                <mat-list-item routerLink="/admin/kontak">
+                    <mat-icon matListIcon>dashboard</mat-icon>
+                    <h3 matLine>About</h3>
+                </mat-list-item>
+
+            </mat-nav-list>
+
+        </mat-sidenav>
+
+        <mat-sidenav #sidenav mode="side" [position]="'end'" class="example-sidenav" [fixedInViewport]="true"
+            [fixedTopGap]="60" [fixedBottomGap]="0">
+
+        </mat-sidenav>
+        <!--sidenav content-->
+        <mat-sidenav-content style="padding: 20px; background-color: rgb(255, 255, 255);">
+            <!--halaman-halaman tampil disini-->
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+        <!--end sidenav content-->
+    </mat-sidenav-container>
+</ng-container>

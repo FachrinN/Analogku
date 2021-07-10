@@ -1,0 +1,37 @@
+<h2 mat-dialog-title><b>Tambah Data Baru</b></h2>
+<div mat-dialog-content>
+    <mat-form-field style="width: 100%;">
+        <mat-label>Merk Camera</mat-label>
+        <input matInput [(ngModel)]="data.merkCamera">
+    </mat-form-field>
+
+    <mat-form-field style="width: 100%;">
+        <mat-label>Tipe Camera</mat-label>
+        <input matInput [(ngModel)]="data.tipeCamera">
+    </mat-form-field>
+
+    <mat-form-field style="width: 100%;">
+        <mat-label>Kelengkapan</mat-label>
+        <input matInput [(ngModel)]="data.kelengkapan">
+    </mat-form-field>
+
+    <mat-form-field style="width: 100%;">
+        <mat-label>Harga</mat-label>
+        <input matInput [(ngModel)]="data.harga">
+    </mat-form-field>
+
+    <mat-form-field style="width: 100%;">
+        <mat-label>Penjual</mat-label>
+        <input matInput [(ngModel)]="data.penjual">
+    </mat-form-field>
+
+    <mat-form-field style="width: 100%;">
+        <mat-label>Lokasi Penjual</mat-label>
+        <input matInput [(ngModel)]="data.lokasi">
+    </mat-form-field>
+</div>
+<mat-dialog-actions style="display: flex; justify-content: end;">
+    <span class="spacer"></span>
+    <button mat-button mat-dialog-close>Batal</button>
+    <button mat-raised-button color="primary" [mat-dialog-close]="true" (click)="simpan()">Simpan</button>
+</mat-dialog-actions>

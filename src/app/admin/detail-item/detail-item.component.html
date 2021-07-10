@@ -1,0 +1,53 @@
+<h2 mat-dialog-title>Item : <b>{{data.merkCamera}}</b></h2>
+<h3 mat-dialog-title>Nama penjual : {{data.penjual}}</h3>
+<div mat-dialog-content>
+    <mat-list>
+        <h3 matSubheader>Detail Item</h3>
+        <mat-list-item>
+            <mat-icon matListIcon>receipt</mat-icon>
+            <p style="font-weight: 600; color: #3A6351;" matLine>Id</p>
+            <h3 mat-line>{{data.id}}</h3>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+
+        <mat-list-item>
+            <mat-icon matListIcon>photo_camera</mat-icon>
+            <p style="font-weight: 600; color: #3A6351;" matLine>Merk Camera</p>
+            <h3 mat-line>{{data.merkCamera}}</h3>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+
+        <mat-list-item>
+            <mat-icon matListIcon>lens_blur</mat-icon>
+            <p style="font-weight: 600; color: #3A6351;" matLine>Tipe Camera</p>
+            <h3 mat-line>{{data.tipeCamera}}</h3>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+
+        <mat-list-item>
+            <mat-icon matListIcon>widgets</mat-icon>
+            <p style="font-weight: 600; color: #3A6351;" matLine>Kelengkapan</p>
+            <h3 mat-line>{{data.kelengkapan}}</h3>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+
+        <mat-list-item>
+            <mat-icon matListIcon>place</mat-icon>
+            <p style="font-weight: 600; color: #3A6351;" matLine>Lokasi Penjual</p>
+            <h3 mat-line>{{data.lokasi}}</h3>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+
+        <mat-list-item>
+            <mat-icon matListIcon>paid</mat-icon>
+            <p style="font-weight: 600; color: #3A6351;" matLine>Harga</p>
+            <h3 mat-line>{{data.harga}}</h3>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+
+    </mat-list>
+</div>
+<mat-dialog-actions style="display: flex; justify-content: end;">
+    <span class="spacer"></span>
+    <button mat-button mat-dialog-close>Tutup</button>
+</mat-dialog-actions>

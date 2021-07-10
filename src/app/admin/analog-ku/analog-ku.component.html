@@ -1,0 +1,47 @@
+<div style=" padding:0.2rem;">
+    <div class="container">
+        <div style="display: flex; justify-content: space-between;">
+            <h1 style="font-weight: 800; color: #3A6351;">Daftar Penjualan</h1>
+            <button class="btn-tambah" mat-raised-button style="background-color: #5F939A; color: white;"
+                (click)="tambahItem({},-1)">Tambah
+                Data</button>
+        </div>
+
+        <mat-card style=" width: 95%; background-color: #F2EDD7; margin-bottom: 1.2rem;"
+            *ngFor="let analog of analogs; let idx=index">
+            <mat-card-content>
+                <mat-list style="margin-top: -8px;">
+                    <mat-list-item class="posisi1">
+                        <div>
+                            <img style="width:100px; height: 90px; object-fit: cover; border-radius: 8px;"
+                                src="/assets/analog.jpg" alt="">
+                        </div>
+                        <div
+                            style="display: flex; justify-content: space-between; width: 100%; margin: 0 0 0 1.5rem; align-items: center;">
+                            <div>
+                                <h3 matLine><b>{{analog.merkCamera}}</b></h3>
+                                <p matLine>
+                                    <span> Harga : {{analog.harga}} </span>
+                                </p>
+                                <p matLine>
+                                    <span>Penjual : {{analog.penjual}}</span>
+                                </p>
+                            </div>
+                            <div>
+                                <button class="btn-edit" mat-raised-button
+                                    style="background-color: #3A6351; color: white;"
+                                    (click)="detailItem(analog, idx)">Detail</button>
+                                <button class="btn-edit" mat-raised-button
+                                    style="background-color: #5F939A; color: white;"
+                                    (click)="tambahItem(analog, idx)">Edit</button>
+
+                                <button class=" btn-delete" mat-raised-button
+                                    style="background-color: #A0937D; color: white;"
+                                    (click)="deleteItem(analog, idx)">Hapus</button>
+                            </div>
+                        </div>
+                    </mat-list-item>
+                </mat-list>
+            </mat-card-content>
+        </mat-card>
+    </div>
